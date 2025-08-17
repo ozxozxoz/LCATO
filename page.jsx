@@ -1,15 +1,10 @@
-import fs from 'fs'
-import path from 'path'
-
-export const metadata = { title: 'Who is LCATO' }
-
 export default function Page(){
-  const text = fs.readFileSync(path.join(process.cwd(),'app','data','whois.txt'),'utf8')
-  const lines = text.split('\n').map((l,i)=> <p key={i}>{l}</p>)
   return (
-    <section className="section">
-      <h1>Who is LCATO</h1>
-      {lines}
+    <section className="hero">
+      <h1>LCATO — بيت خبرة استشاري متكامل</h1>
+      <p className="muted">حلول عملية متجذرة في فهمنا للمجتمع المحلي، مدعومة بمعايير عالمية.</p>
+      <hr className="sep" />
+      <p>اطّلع على <a href="/who-is-lcato">Who is LCATO</a> أو <a href="/services">الخدمات</a> و <a href="/industries">القطاعات</a>.</p>
     </section>
   )
 }
